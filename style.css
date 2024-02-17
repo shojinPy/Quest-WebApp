@@ -1,0 +1,124 @@
+*{
+    margin: 0px;
+    transition: .3s;
+}
+
+@keyframes InTrans{
+    1%{
+        transform: translateY(-10px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+:root{
+    --color-black: #1A1A1A;
+    --color-lightblack: #303030;
+    --color-grey: #6E6E6E;
+    --color-darkwhite: #9E9E9E;
+    --color-white: #F7F7F7;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--color-white);
+    color: var(--color-black);
+}
+
+/* header section styles */
+header{
+    background-color: var(--color-lightblack);
+    color: var(--color-white);
+    line-height: 40px;
+    text-align: center;
+    margin: 10px;
+    padding: 10px 5px;
+    border: 4px solid var(--color-grey);
+    border-radius: 15px;
+}
+header h1{
+    font-size: 3em;
+}
+header span{
+    color: lightblue;
+    font-style: italic;
+}
+
+/* input section styles */
+#inputSection{
+    background-color: var(--color-lightblack);
+    margin: 10px;
+    padding: 15px 10px;
+    border: 4px solid var(--color-grey);
+    border-radius: 10px;
+    position: sticky;
+    top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 1;
+}
+#inputSection input{
+    font-size: 1em;
+    padding: 5px;
+    height: 2em;
+    border: 3px solid var(--color-grey);
+    border-radius: 10px;
+    outline: none;
+}
+#inputSection button{
+    color: var(--color-white);
+    font-size: 1.1em;
+    font-weight: bolder;
+    padding: 5px;
+    background-color: transparent;
+    border: 4px solid var(--color-white);
+    border-radius: 10px;
+}
+#inputSection button:active{
+    color: var(--color-black);
+    background-color: var(--color-white);
+}
+
+/*Quest List Styles */
+#questSelection{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.task{
+    border: 4px solid var(--color-lightblack);
+    border-radius: 10px;
+    color: var(--color-lightblack);
+    margin: 10px;
+    padding: 10px;
+    animation: InTrans .3s ease-out forwards;
+    overflow: auto;
+    overflow-wrap: break-word;
+    display: grid;
+    grid-template-columns: 90% 10%;
+}
+.trashBtn{
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--color-white);
+    opacity: .5;
+}
+.trashBtn:hover{
+    background-color: rgb(209, 209, 209);
+    opacity: 1;
+}
+.trashBtn:active{
+    transform: scale(1.1);
+    -webkir-tap-highlight-color: transparent;
+    transition: .1s;
+}
+
+@media screen and (min-width:768px){
+    body{
+        width: 768px;
+        margin: 0 auto;
+    }
+}
