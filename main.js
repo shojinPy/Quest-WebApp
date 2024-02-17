@@ -32,4 +32,9 @@ addBtn.onclick = function(){
     console.log("MISS YOU SO MUCCCHHYY POO AWHHEHWEHWEHWEHWHEWHE <<33");
 }
 
-// MISS YOU PO HWEHWEHWEHWEHWHEWHEHWEHWEHWHE
+// Easter Egg
+const hiddenBtn = document.querySelector('#hiddenMess');
+
+hiddenBtn.onclick = function(){
+    alert("I MISS YOUU PO MWEHWEWHEWHEHWHEWHEHW<3")
+}
